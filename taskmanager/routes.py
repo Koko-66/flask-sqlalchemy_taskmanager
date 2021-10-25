@@ -6,5 +6,4 @@ from taskmanager.models import Category, Task
 """Set route function for base.html"""
 @app.route("/")
 def home():
-    return render_template("base.html")
-
+    return render_template("tasks.html")

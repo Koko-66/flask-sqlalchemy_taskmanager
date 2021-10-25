@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    
     <title>Task Manager</title>
 </head>
 <body>
-    Hello
+    <!-- header -->
+    <header>
+        <!-- top nav bar -->
+        <nav class="#880e4f pink darken-4">
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">Task Manager</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="">New Task</a></li>
+                <li><a href="">Categories</a></li>
+              </ul>
+            </div>
+          </nav>
+        <!-- mobile side nav -->
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">New Task</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+    </header>
+
+    <!-- main body -->
+    <main class="container">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer blue darken-1">
+        <div class="footer-copyright">
+          <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!" target="blank">More Links</a>
+          </div>
+        </div>
+      </footer>
+
+    <!-- scripts -->
+    <!-- jquery -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- font awesome -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </body>
 </html>
