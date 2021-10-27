@@ -8,4 +8,6 @@
     });
     // select initialization
     $('select').formSelect();
+    // collapsible initialisation
+    $('.collapsible').collapsible();
   });
